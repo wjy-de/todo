@@ -3,6 +3,17 @@
     padding: 0;
     font-family:"微软雅黑";
 }
+ul,li{
+    list-style: none;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('iconfont.eot');
+  src: url('iconfont.eot?#iefix') format('embedded-opentype'),
+  url('iconfont.woff') format('woff'),
+  url('iconfont.ttf') format('truetype'),
+  url('iconfont.svg#iconfont') format('svg');
+}
 html{
     font-size:100px;
 //  background-color: #ccc;
@@ -18,25 +29,128 @@ $d-list:320px,360px,375px,412px,414px;
         }
     }
 }
-@mixin position{
-    position: absolute;
-    top: 0.2rem;
-}
 .header{
     width: 100%;
     height: 1rem;
-    background: #b6dfd4;
+    line-height: 1rem;
+    background: #cf1332;
+    position: relative;
+    color: #f1b9c2;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 0 20px;
+    box-sizing: border-box;
+    .l1,.r1{
+        font-family: 'iconfont';
+        cursor: pointer;
+    }
+    .l1{
+        float: left;
+        margin-right: 32px;
+    }
+    .l2{
+        float: left;
+        color: #fff;
+    }
+    .r1{
+        float: right;
+        font-weight:bold;
+    }
+}
+.add-header{
+    background: #5b737c;
+    color: #ccd4d6;
 }
 .content{
     width: 100%;
-    height: 200px;
-    background: #FFFFFF;
+    height: auto;
+    li{
+        width: 100%;
+        height: 1.35rem;
+        background: url(img/bj.png) repeat-x 0 0;
+        background-size: 22px 1.35rem;
+        .add{
+            width: 1.05rem;
+            height: 100%;
+            background: url(img/libj.png)repeat-x 0 0 ;
+            background-size: 22px 1.35rem;
+            float: left;
+            position: relative;
+            overflow: hidden;
+            margin-right: 10px;
+            box-sizing: border-box;
+            .top{
+                font-family: 'iconfont';
+                color: #e9ecee;
+                position: absolute;
+                top: 0.15rem;
+                left: 0.1rem;
+                display: none;
+            }
+            .bot{
+                font-family: 'iconfont';
+                color: #e9ecee;
+                position: absolute;
+                bottom: 0.12rem;
+                right: 0.4rem;
+            }
+        }
+        .delete{
+            width: 6.2rem;
+            height: 100%;
+            background: url(img/libj.png)repeat-x 0 0 ;
+            background-size: 22px 1.35rem;
+            float: left;
+            position: relative;
+            box-sizing: border-box;
+            border-left: 1px solid #4f646b;
+//          display: none;
+            z-index: 1000;
+            .l{
+                height: 0.34rem;
+                width: 0.33rem;
+                position: absolute;
+                left: 0.45rem;
+                top:0.3rem ;
+                font-family: 'iconfont';
+                color: #fff;
+                font-size: 34px;
+            }
+            .r{
+                height: 0.34rem;
+                width: 0.33rem;
+                position: absolute;
+                right: 0.45rem;
+                top:0.3rem ;
+                color: #44565d;
+                font-size: 30px;
+            }
+        }
+    }
 }
-.footer{
-    width: 100%;
-    height: 1rem;
+.addB{
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    background: #cf1332;
     position: fixed;
-    bottom: 0;
-    left: 0;
+    bottom: 0.36rem;
+    right: 0.36rem;
+    text-align: center;
+    line-height: 0.9rem;
+    font-family: 'iconfont';
+    color: #fff;
+    font-size: 0.4rem;
+}
+
+/*add页面*/
+textarea{
+    width: 100%;
+    height: 12.3rem;
+    box-sizing: border-box;
     background: #fff;
+    resize: none;
+    -webkit-appearance: none;
+    outline: none;
+    border: 8px solid #eeeeee;
 }
