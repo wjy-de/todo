@@ -33,21 +33,22 @@ $(function(){
 	var add3=$("ul li .add")
 	var li=$("ul li");
 	var delete1=li.find(".delete");
-//	li.on('touchend',"add3",function(e){
-//		
-////		var posEnd=e.originalEvent.changedTouches[0].clientX;
-//		var index=add3.index($(this));
+	add3.on('touchend',function(e){
+//		$(this).find(".top").css("display","block")
+//		var posEnd=e.originalEvent.changedTouches[0].clientX;
+//		var index=$(this).index();
 //		console.log(index)
-////		if(posEnd-posStart>50){
+//		if(posEnd-posStart>50){
 //			todos[index].state=1;
-//			$("<div class='delete'><div class='l'>"+'&#xe643;'+"</div><div class='r'>"+'X'+"</div></div>").appendTo($(this));
+			$("<div class='top'>"+'&#xe643;'+"</div>").appendTo($(this))
+//			$("<div class='delete'><div class='l'>"+'&#xe643;'+"</div><div class='r'>"+'X'+"</div></div>").appendTo(li);
 ////		}
 ////		if(posEnd-posStart<-50){
 ////			todos[index].state=0;
 ////			$(this).removeClass("done");
 ////		}
 //		localStorage.x=JSON.stringify(todos);
-//	})
+	})
 	
 	/*右滑删除*/
 	ul.on('touchstart',"li",function(e){
