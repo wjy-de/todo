@@ -4,6 +4,28 @@ $(function(){
 	add1.on("touchend",function(){
 		location.href="add.html";
 	})
+	
+	/*删除*/
+	var modify = $(".content");
+	modify.on('touchend','li .add',function(){
+		var index = $(this).closest("li").index();
+		console.log(index);
+		$('<div class="delete"><div class="l">&#xe643;</div><div class="r">X</div></div>').appendTo($(".content li").eq(index));	
+		return false;
+	})
+	
+	modify.on('click','li .delete .r',function(){
+		$(this).closest('li').css("display","none");
+		console.log(1)
+	})
+	
+	modify.on('click','li .delete',function(){
+		$(this).css("display","none");
+		console.log(1)
+	})
+	/*删除*/
+	
+	
 	/*添加内容页*/
 	var add2=$(".header .l1");
 	add2.on("touchend",function(){
